@@ -1,0 +1,45 @@
+```{r set-options, echo=FALSE}
+options(width = 180) #console text output width
+opts_chunk$set(comment = "", cache = F, error = F, warning = F, message = F, echo = T, tidy = F, fig.width = 10, fig.height = 7)
+```
+
+Bayesian Analysis HW 1
+========================================================
+
+1. (Bolstad 4.8) Two dice are rolled. The red die has been loaded. Its probabilities are P(1) = P(2) = P(3) = P(4) = 1/5 and P(5) = P(6) = 1/10. The green die is fair. Let the event A be "the sum of the faces showing is an even number." Let the event B be "the sum of the faces showing is divisible by 3". </br> </br>
+a. List the outcomes in A and find P(A).
+
+```{r, echo=FALSE}
+
+namesA <- c("Die 1", "Die 2", "Probability of A")
+pa <- read.table("C:/Users/RQL.Intern/Documents/Fall 2013 Stat 676/PA.txt", col.names=paste(namesA), sep="\t", header=F)
+print(pa)
+
+```
+
+b. List the outcomes in B and find P(B).
+
+```{r, echo=FALSE}
+
+namesB <- c("Die 1", "Die 2", "Probability of B")
+pb <- read.table("C:/Users/RQL.Intern/Documents/Fall 2013 Stat 676/PB.txt", col.names=paste(namesB), sep="\t", header=F)
+print(pb)
+
+```
+
+c. List the outcomes in A and B, and find P(A and B).
+
+```{r, echo=FALSE}
+
+namesAB <- c("Die 1", "Die 2", "Probability of A and B")
+pb <- read.table("C:/Users/RQL.Intern/Documents/Fall 2013 Stat 676/PAB.txt", col.names=paste(namesAB), sep="\t", header=F)
+print(pb)
+
+```
+
+d. Are the events A and B independent? Explain why or why not. </br> </br>
+No, if A and B were independent then the P(A and B) = P(A)*P(B), while in this situation P(A and B) = P(A) = P(B)
+
+
+2. (Carlin and Louis problem 1.1) Let $\theta$ be the true proportion of men over the age of 40 in your community with hypertension. Consider the following "thought experiment": </br> </br>
+a. Though you may have little or no expertise in this area, give an initial point estimate of "$\theta$"
